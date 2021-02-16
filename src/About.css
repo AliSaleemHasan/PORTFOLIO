@@ -1,0 +1,126 @@
+.about {
+  margin-top: 15vh;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 0px 0px 10px #444;
+  padding: 10px;
+}
+.about__left {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.about__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 30vw;
+}
+.about__personalInfo {
+  width: 90%;
+  overflow: visible;
+}
+
+.about__info {
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.about__info > h5 {
+  font-size: 1em;
+  padding-right: 4px;
+  font-weight: 700;
+}
+.about__text {
+  margin: 0 10px;
+}
+.about__text > h4 {
+  margin-bottom: 20px;
+}
+.about__text > p {
+  line-height: 25px;
+  margin-bottom: 6px;
+  font-family: sans-serif;
+}
+.about__text > h5 {
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #d9ad29;
+}
+.about__text > p:last-of-type {
+  margin-bottom: 35px;
+}
+.about__text .about__skills {
+  margin-top: 10px;
+}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+.about__skills {
+  margin-top: 10px;
+}
+.skills {
+  text-align: right;
+  color: #ddd;
+}
+.skill > h5 {
+  color: #444;
+  margin-bottom: 4px;
+}
+.html {
+  width: 70%;
+  background-color: #2196f3;
+}
+.mongo {
+  width: 60%;
+  background-color: #2196f3;
+}
+.react {
+  width: 75%;
+  background-color: #2196f3;
+}
+.firebase {
+  width: 60%;
+  background-color: #2196f3;
+}
+.nodejs {
+  width: 70%;
+  background-color: #2196f3;
+}
+.skill {
+  margin: 20px 0;
+}
+
+.resume {
+  margin: 20px;
+  display: grid;
+  place-items: center;
+  width: 90%;
+  height: 6vh;
+  background-color: #2196f3;
+  border-radius: 20px;
+}
+.resume > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.resume > a:hover {
+  box-shadow: 0px 0px 10px #b5d8f5;
+}
+
+@media (max-width: 786px) {
+  .about {
+    flex-direction: column;
+  }
+  .about__left,
+  .about__right {
+    width: 100%;
+  }
+}

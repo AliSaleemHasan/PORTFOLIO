@@ -1,0 +1,101 @@
+.contact {
+  margin: 5vh auto;
+  height: 90%;
+  width: 80vw;
+  position: relative;
+  color: #111;
+  background-color: #fff;
+}
+
+.contact__container {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact__container > h1 {
+  position: relative;
+  margin: 20px 0;
+}
+
+.contact__container > h1::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: #0078ff;
+  width: 100px;
+  bottom: -10px;
+}
+.contact__container > form {
+  z-index: 0;
+  font-size: 1.1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__container > form > input {
+  height: 25px;
+  outline: none;
+  margin-bottom: 25px;
+}
+
+.contact__container > form > textarea {
+  outline: none;
+}
+
+.contact__container > form > button {
+  width: 30%;
+  background-color: #0078ff;
+  color: #fff;
+  font-size: 1.1em;
+  margin: 20px 0;
+  border-radius: 30px;
+  outline: none;
+  height: 45px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+.contact__getInTouch > h2 {
+  margin-top: 50px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.contact__getInTouch > h2::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: #0078ff;
+  width: 100px;
+  bottom: -6px;
+}
+
+.info__contain {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.info__contain p {
+  margin-left: 5px;
+}
+.info__contain a {
+  text-decoration: none;
+}
+
+@media (max-width: 786px) {
+  .contact__container > form > button {
+    width: 50%;
+    height: 55px;
+  }
+  .info {
+    flex-direction: column;
+  }
+}

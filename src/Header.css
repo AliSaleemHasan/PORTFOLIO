@@ -1,0 +1,148 @@
+.header {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  background-color: #fff;
+  place-items: center;
+}
+
+.header__left {
+  z-index: 100;
+  animation: header__leftAnimation 4s infinite;
+}
+.header__right {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+
+  width: 30vw;
+  margin: 0 auto;
+}
+
+.header__rightReferences {
+  display: none;
+}
+.icon {
+  color: #aaa;
+  margin: 20px;
+}
+.icon:hover {
+  color: #0d1ac5;
+  cursor: pointer;
+}
+
+.header__logo {
+  max-width: 150px;
+  z-index: 100;
+  object-fit: contain;
+}
+
+.header__right ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 90%;
+  height: 50%;
+}
+.header__right li {
+  font-size: medium;
+  font-weight: 400;
+  font-family: sans-serif;
+  color: #d9ad29;
+}
+
+.header__right li:hover {
+  cursor: pointer;
+  text-shadow: 1px 1px 1px #ffa100;
+}
+.header__right > h3:hover {
+  cursor: pointer;
+  color: #444;
+  text-shadow: 0.4px 0px 0.2px #222;
+}
+
+.header__humburger {
+  z-index: 100;
+  display: none;
+  position: absolute;
+  top: 15px;
+
+  right: 30px;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.header__humburger:hover {
+  cursor: pointer;
+  background-color: #292ce0;
+}
+.line {
+  width: 20px;
+  height: 3px;
+  margin: 3px 0;
+  background-color: #ffa100;
+}
+
+@media (max-width: 786px) {
+  .header__right {
+    transition: all 1s;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background: #edeff0;
+    transform: translateY(100%);
+  }
+
+  .header__right ul {
+    margin-top: 20px;
+    flex-direction: column;
+    place-items: center;
+  }
+
+  .header__right > h3 {
+    padding: 0 40px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .header__humburger {
+    display: block;
+    z-index: 1;
+  }
+
+  .header__right li {
+    transition: all 1s ease-in;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  .header__rightActive {
+    transform: translateY(0px);
+  }
+
+  .header__rightActive li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .header__rightReferences {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@keyframes header__leftAnimation {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
